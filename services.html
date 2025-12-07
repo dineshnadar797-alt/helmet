@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>All Helmets – Your Company Name</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive-fix.css">
+</head>
+
+<body>
+
+<header class="header">
+  <div class="logo">Your Company</div>
+  <nav class="nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html" class="active">Products</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="container">
+  <h1>Our Helmet Collection</h1>
+  <p>Browse through our full range of high-quality helmets designed for safety, comfort, and style.</p>
+
+  <div class="product-grid-page">
+
+    <!-- PRODUCT ITEM -->
+    <div class="product-card">
+      <img src="img/pro black.png" alt="Rider Pro Black" class="responsive-img">
+      <h3>Rider Pro Black</h3>
+      <p>Full-face matte black helmet with strong ABS shell.</p>
+      <a href="#" class="btn">View Details</a>
+    </div>
+
+    <div class="product-card">
+      <img src="img/firered.png" alt="FireEdge Red" class="responsive-img">
+      <h3>FireEdge Red</h3>
+      <p>Sporty red helmet with dual visor and airflow vents.</p>
+      <a href="#" class="btn">View Details</a>
+    </div>
+
+    <div class="product-card">
+      <img src="img/aero.png" alt="AeroShield White" class="responsive-img">
+      <h3>AeroShield White</h3>
+      <p>Aerodynamic lightweight helmet for comfort riding.</p>
+      <a href="#" class="btn">View Details</a>
+    </div>
+
+    <div class="product-card">
+      <img src="img/stormx.png" alt="StormX Helmet" class="responsive-img">
+      <h3>StormX Ultra</h3>
+      <p>ISI-approved helmet with heavy-duty ABS shell.</p>
+      <a href="#" class="btn">View Details</a>
+    </div>
+
+    <!-- Add more products here -->
+    
+  </div>
+</section>
+
+<footer>
+  <p>&copy; <span id="year"></span> Your Company Name</p>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

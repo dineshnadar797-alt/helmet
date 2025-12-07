@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Placed</title>
+<link rel="icon" type="image/x-icon" href="img/hexride.png">
+<link rel="stylesheet" href="css/responsive-fix.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Poppins", Arial, sans-serif;
+      background: linear-gradient(135deg, #4facfe, #00f2fe);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      animation: fadeIn 1.5s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .card {
+      background: #ffffff;
+      padding: 50px 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 35px rgba(0,0,0,0.15);
+      max-width: 450px;
+      animation: slideUp 1.2s ease;
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(100px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .logo {
+      margin-bottom: 20px;
+    }
+
+    .logo img {
+      width: 150px;
+      border-radius: 10px;
+      margin: 0 auto;
+      display: block;
+    }
+    
+    .checkmark {
+      font-size: 90px;
+      color: #28a745;
+      animation: pop .6s ease;
+    }
+
+    @keyframes pop {
+      0% { transform: scale(0); }
+      70% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+
+    h1 {
+      font-size: 32px;
+      color: #333;
+      margin-top: 10px;
+    }
+
+    p {
+      font-size: 18px;
+      color: #555;
+      margin: 10px 0 25px;
+    }
+
+    a {
+      display: inline-block;
+      padding: 12px 25px;
+      background: #007bff;
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+      border-radius: 8px;
+      transition: 0.3s ease;
+    }
+
+    a:hover {
+      background: #0056b3;
+    }
+
+    .logo img {
+  width: 150px;
+  border-radius: 10px;
+  margin: 0 auto;
+  display: block;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
+}
+
+    .card {
+  animation: slideUp 1.2s ease, breathe 5s ease-in-out infinite;
+}
+
+@keyframes breathe {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.015); }
+  100% { transform: scale(1); }
+}
+
+ </style>
+</head>
+
+<body>
+
+  <div class="card">
+
+    <!-- Logo Section (Replace with your logo path) -->
+    <div class="logo">
+      <img src="img/hexride.png" alt="Logo">
+    </div>
+
+    <!-- Animated Checkmark -->
+    <div class="checkmark">✓</div>
+
+    <!-- Text -->
+    <h1>Order Placed!</h1>
+    <p>Thank you for your purchase. Your order is confirmed and being processed.</p>
+
+    <a href="index.html">Go Back to Home</a>
+
+  </div>
+
+</body>
+</html>

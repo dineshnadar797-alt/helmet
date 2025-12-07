@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Place Your Order – HexRide</title>
+<link rel="icon" type="image/x-icon" href="img/hexride.png">
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #f0f4f7;
+    padding: 20px;
+  }
+
+  .form-box {
+    max-width: 600px;
+    background: #fff;
+    padding: 30px;
+    margin: auto;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #007bff;
+  }
+
+  label {
+    font-weight: bold;
+    display: block;
+    margin: 10px 0 5px;
+  }
+
+  input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+  }
+
+  button {
+    width: 100%;
+    background: #007bff;
+    color: white;
+    padding: 14px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background: #0056b3;
+  }
+</style>
+
+<style>
+.back-home {
+  display: inline-block;
+  margin-top: 15px;
+  text-decoration: none;
+  color: #007bff;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.back-home:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+</style>
+
+</head>
+
+<body>
+
+<form action="order done.html">
+
+
+<div class="form-box">
+
+  <h1>Place Your Order</h1>
+
+  <form action="order-success.html">
+
+    <label>Full Name</label>
+    <input type="text" name="name" required>
+
+    <label>Phone Number</label>
+    <input type="tel" name="phone" required>
+
+    <label>Email</label>
+    <input type="email" name="email">
+
+    <label>Full Address</label>
+    <textarea name="address" rows="4" required></textarea>
+
+    <label>Selected Helmet</label>
+    <input type="text" id="productField" name="helmet" readonly required>
+
+    <label>Size</label>
+    <select name="size" required>
+      <option value="">-- Select Size --</option>
+      <option>Small</option>
+      <option>Medium</option>
+      <option>Large</option>
+      <option>XL</option>
+    </select>
+
+    <label>Quantity</label>
+    <input type="number" name="quantity" min="1" value="1" required>
+
+    <label>Payment Method</label>
+    <select name="payment" required>
+      <option value="">-- Select --</option>
+      <option>Cash on Delivery</option>
+      <option>UPI</option>
+      <option>Credit/Debit Card</option>
+    </select>
+
+    <button type="submit">Place Order</button>
+<br>
+
+  </form>
+
+    <a href="products.html" class="back-home">Go Back</a>
+</div>
+
+<script>
+  // Get product from URL and display it
+  const urlParams = new URLSearchParams(window.location.search);
+  const product = urlParams.get("product");
+  document.getElementById("productField").value = product || "Not Selected";
+</script>
+
+</body>
+</html>

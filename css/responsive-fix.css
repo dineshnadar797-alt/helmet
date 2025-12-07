@@ -1,0 +1,191 @@
+/* ===============================
+   HEXRIDE MOBILE & RESPONSIVE FIX
+   Safe for sliders, carousels, and animations
+================================*/
+
+/* Global box sizing */
+* {
+  box-sizing: border-box;
+}
+
+/* Body and html */
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent global horizontal scroll */
+}
+
+/* Responsive images */
+img, .responsive-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Containers and cards */
+.container,
+.featured-box,
+.product-card,
+.scroll-box {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Flex containers */
+.featured-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.scroll-box-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /* smooth mobile scrolling */
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+
+.scroll-box {
+  display: flex;
+  gap: 15px;
+  flex-wrap: nowrap;
+}
+
+.scroll-box > .product-card {
+  flex: 0 0 auto; /* prevent shrinking */
+  scroll-snap-align: start;
+  min-width: 250px;
+}
+
+/* Hero section */
+.hero img {
+  width: 100%;
+  height: auto;
+}
+
+.hero-text {
+  position: relative;
+}
+
+/* Carousel slides */
+.carousel-slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  overflow: visible !important;
+  max-width: none !important;
+}
+
+/* Media queries for tablets & mobile */
+@media screen and (max-width: 1024px) {
+  .scroll-box > .product-card {
+    min-width: 200px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* Hero adjustments */
+  .hero {
+    text-align: center;
+    padding: 15px;
+  }
+
+  .hero-text h1 {
+    font-size: 1.8em;
+  }
+
+  .hero-text p {
+    font-size: 1em;
+  }
+
+  /* Featured products stack vertically */
+  .featured-box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .featured-box > div,
+  .featured-box img {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  /* Product cards width */
+  .scroll-box > .product-card {
+    min-width: 80%;
+    margin-bottom: 15px;
+  }
+
+  /* Navbar mobile menu */
+  .nav ul {
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    width: 200px;
+    max-height: 80vh;
+    overflow-y: auto;
+    flex-direction: column;
+    display: none;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #0056b3;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background: linear-gradient(180deg, #007bff, #00aaff);
+  }
+
+  .nav ul.show {
+    display: block;
+  }
+
+  .nav a {
+    padding: 8px 0;
+    font-size: 16px;
+  }
+
+  /* Footer adjustments */
+  .footer-container {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .footer-section ul li a {
+    font-size: 14px;
+  }
+
+  /* Carousel container */
+  .carousel-container {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+
+  .slide {
+    min-width: 100%;
+  }
+}
+
+/* Protect sliders and animations */
+.about-slide-track,
+.carousel-slides {
+  overflow: visible !important;
+  max-width: none !important;
+}
+
+/* Extra small screens (<480px) */
+@media screen and (max-width: 480px) {
+  .scroll-box > .product-card {
+    min-width: 90%;
+  }
+
+  .hero-text h1 {
+    font-size: 1.5em;
+  }
+
+  .hero-text p {
+    font-size: 0.95em;
+  }
+}
+

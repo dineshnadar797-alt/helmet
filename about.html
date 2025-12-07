@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>About Us — HexRide</title>
+<link rel="icon" type="image/x-icon" href="img/hexride.png">
+  <meta name="description" content="Learn about Your Company Name, our mission, values, and our commitment to providing top-quality services to our customers.">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive-fix.css">
+<style>
+/* Navbar with gradient background */
+.header {
+  background: linear-gradient(90deg, #007bff, #00aaff); /* HexRide gradient blue */
+  border-bottom: 2px solid #0056b3;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.header:hover {
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.logo {
+  color: #fff;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.nav a {
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s, transform 0.2s;
+}
+
+.nav a:hover,
+.nav a.active {
+  color: #ffd700; /* Gold on hover or active */
+  transform: scale(1.1);
+}
+
+/* Mobile menu button */
+.menu-btn {
+  color: #fff;
+  font-size: 26px;
+}
+
+/* Mobile responsive menu */
+@media (max-width: 768px) {
+  .nav ul {
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background: linear-gradient(180deg, #007bff, #00aaff);
+    flex-direction: column;
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #0056b3;
+    display: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  .nav ul.show {
+    display: block;
+  }
+
+  .nav a {
+    padding: 8px 0;
+  }
+}
+</style>
+
+
+</head>
+
+<body>
+
+<header class="header">
+  <div class="logo">
+  <img src="img/hexride.png" width="40"> HexRide
+</div>
+
+  <nav class="nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="menu-btn" onclick="toggleMenu()">☰</div>
+</header>
+
+<main class="container">
+
+  <h1>About Our Company</h1>
+<br>
+  <p>At HexRide, we are passionate about one thing: keeping riders safe while looking stylish. Founded by motorcycle enthusiasts, HexRide is committed to delivering premium-quality helmets that combine safety, comfort, and cutting-edge design.
+
+Our mission is to provide every rider with a helmet they can trust. Whether you’re commuting through city streets or embarking on a long-distance adventure, HexRide helmets are engineered to protect, perform, and inspire confidence on every ride.
+
+All our helmets meet or exceed global safety standards, with reinforced shells, impact-absorbent padding, and anti-scratch visors. We use only premium materials to ensure durability, comfort, and long-lasting performance, while maintaining innovative designs that riders love.
+
+HexRide is more than just a brand; it’s a community of riders who value safety, adventure, and style. Join us and experience the difference of riding with confidence.</p>
+
+<br>
+
+ <div class="about-slider">
+  <div class="about-slide-track">
+
+    <img src="img/about1.jpg" alt="Company Image">
+    <img src="img/about2.jpg" alt="Team Image">
+    <img src="img/about3.jpg" alt="Factory">
+    <img src="img/about4.jpg" alt="Workshop">
+    <img src="img/about5.jpg" alt="Store">
+
+    <!-- Duplicate images for smooth infinite effect -->
+    <img src="img/about1.jpg" alt="Company Image">
+    <img src="img/about2.jpg" alt="Team Image">
+    <img src="img/about3.jpg" alt="Factory">
+    <img src="img/about4.jpg" alt="Workshop">
+    <img src="img/about5.jpg" alt="Store">
+  </div>
+</div>
+
+<br>
+  <section>
+    <h2>Our Mission</h2>
+<br>
+    <p>At HexRide, our mission is to redefine rider safety without compromising style or performance. We are dedicated to designing premium helmets that offer maximum protection, unmatched comfort, and cutting-edge innovation. Every HexRide helmet is crafted to empower riders with confidence on every journey—whether on city streets, open highways, or rugged trails. Safety is not just our priority; it’s our promise. Ride smarter, ride safer, ride with HexRide.</p>
+  </section>
+<br>
+  <section>
+    <h2>Our Values</h2>
+<br>
+    <ul>
+      <li>Integrity</li>
+      <li>Customer-first thinking</li>
+      <li>Continuous improvement</li>
+    </ul>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- About -->
+    <div class="footer-section">
+      <h3>HexRide</h3>
+      <p>Premium motorcycle helmets designed for comfort, safety, and style.</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-section">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Support -->
+    <div class="footer-section">
+      <h4>Support</h4>
+      <ul>
+        <li><a href="return-policy.html">Return Policy</a></li>
+        <li><a href="warranty.html">Warranty</a></li>
+        <li><a href="faqs.html">FAQs</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-section">
+      <h4>Contact</h4>
+      <p>Email: hexride@gmail.com</p>
+      <p>Phone: +91 9876543210</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; <span id="year"></span> HexRide | All Rights Reserved ®</p>
+  </div>
+</footer>
+
+
+<script>
+  function toggleMenu() {
+    document.querySelector(".nav ul").classList.toggle("show");
+  }
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

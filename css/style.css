@@ -1,0 +1,505 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f7fb;
+  color: #222;
+  line-height: 1.6;
+}
+
+
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px 0;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  padding: 12px 20px;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1a1a1a;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+
+/* Navigation */
+.nav ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.nav a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #333;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav a:hover {
+  color: #007bff;
+}
+
+.nav a.active {
+  font-weight: bold;
+  color: #007bff;
+}
+
+/* Mobile Menu Button */
+.menu-btn {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* HERO SECTION */
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(to bottom right, #e9f0ff, #f7faff);
+  border-radius: 10px;
+}
+
+/* Fade-in keyframes */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply fade-in to hero section */
+.hero {
+  animation: fadeInUp 1s ease-out;
+}
+
+/* Fade-in for hero text */
+.hero-text {
+  animation: fadeInUp 1.2s ease-out;
+}
+
+/* Hero Image Hover Animation */
+.hero img {
+  transition: transform 0.5s ease, box-shadow 0.4s ease;
+}
+
+.hero img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+.hero img {
+  width: 100%;
+  max-height: 450px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.hero-text {
+  margin-top: 20px;
+}
+
+.hero-text h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 26px;
+  background: linear-gradient(135deg, #007bff, #0056d6);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* FEATURED HELMET SECTION */
+.featured-box {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  flex-wrap: wrap;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+
+.featured-box img {
+  width: 380px;
+  height: auto;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.featured-box img:hover {
+  transform: scale(1.03);
+}
+
+.featured-box h3 {
+  font-size: 26px;
+  margin-bottom: 12px;
+}
+
+.featured-box ul {
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+.featured-box ul li {
+  margin-bottom: 6px;
+  color: #444;
+}
+
+/* PRODUCT GRID */
+.product-grid h2 {
+  text-align: center;
+  margin-bottom: 18px;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.product-grid-page {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.product-card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+
+/* Scrollable Box */
+.scroll-box {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 12px;
+  scroll-snap-type: x mandatory;
+}
+
+.scroll-box::-webkit-scrollbar {
+  height: 8px;
+}
+
+.scroll-box::-webkit-scrollbar-thumb {
+  background: #bbb;
+  border-radius: 10px;
+}
+
+/* Product cards */
+.product-card {
+  flex: 0 0 250px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+  scroll-snap-align: start;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+}
+
+.product-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.product-card h3 {
+  margin-top: 12px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.product-card p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Footer */
+.footer {
+  background: #111;
+  color: #fff;
+  padding: 40px 20px 10px;
+  margin-top: 40px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-section h3,
+.footer-section h4 {
+  margin-bottom: 12px;
+  color: #00aaff;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 6px 0;
+}
+
+.footer-section ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #00aaff;
+  margin-left: 5px;
+}
+
+.footer-section p {
+  margin: 5px 0;
+  color: #ccc;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 15px;
+  border-top: 1px solid #333;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+
+/* MOBILE RESPONSIVE */
+@media (max-width:768px){
+  .nav ul{
+    position:absolute;
+    top:60px;
+    right:10px;
+    background:#fff;
+    flex-direction:column;
+    width:200px;
+    padding:10px;
+    border:1px solid #ccc;
+    display:none;
+  }
+  .nav ul.show{
+    display:block;
+  }
+  .menu-btn{
+    display:block;
+  }
+  .featured-box img {
+    width: 100%;
+  }
+}
+
+/* PRODUCT GRID PAGE */
+.product-grid-page {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+/* Product Card */
+.product-card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* Image Fix */
+.product-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;   /* keeps helmet shape perfectly */
+  background: #f0f0f0;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.product-card h3 {
+  margin-top: 12px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.product-card p {
+  font-size: 14px;
+  color: #555;
+  margin: 8px 0 15px 0;
+}
+
+/* Button */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #0056c7;
+}
+
+.about-slider {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+  padding: 20px 0;
+}
+
+.about-slide-track {
+  display: flex;
+  gap: 20px;
+  animation: scroll 25s linear infinite;
+}
+
+.about-slide-track img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: transform 0.4s;
+}
+
+.about-slide-track img:hover {
+  transform: scale(1.08);
+}
+
+/* Animation */
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ------------------------------
+   MOBILE RESPONSIVE DESIGN
+--------------------------------*/
+
+/* Tablets */
+@media (max-width: 768px) {
+  .about-slide-track img {
+    width: 220px;
+    height: 150px;
+  }
+  .about-slide-track {
+    animation-duration: 18s;
+  }
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+  .about-slide-track img {
+    width: 160px;
+    height: 120px;
+  }
+  .about-slide-track {
+    animation-duration: 14s;
+  }
+}
+
+
+
+/* Contact page images */
+.contact-img {
+  width: 45%;           /* Adjust width as needed */
+  max-width: 200px;     /* Prevent image from getting too large */
+  height: auto;
+  display: block; /* Keep images side by side */
+  margin: 10px 2.5%;    /* Space between images */
+  border-radius: 10px;   /* Optional rounded corners */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Optional shadow */
+}
+
+@media (max-width:768px){
+  .contact-img {
+    width: 80%;          /* Stack images on smaller screens */
+    display: block;
+    margin: 10px auto;
+  }
+}
+

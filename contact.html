@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Contact Us — HexRide</title>
+<link rel="icon" type="image/x-icon" href="img/hexride.png">
+  <meta name="description" content="Contact Your Company Name for inquiries, service requests, or support. We are here to help you.">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive-fix.css">
+<style>
+/* Navbar with gradient background */
+.header {
+  background: linear-gradient(90deg, #007bff, #00aaff); /* HexRide gradient blue */
+  border-bottom: 2px solid #0056b3;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.header:hover {
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.logo {
+  color: #fff;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.nav a {
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s, transform 0.2s;
+}
+
+.nav a:hover,
+.nav a.active {
+  color: #ffd700; /* Gold on hover or active */
+  transform: scale(1.1);
+}
+
+/* Mobile menu button */
+.menu-btn {
+  color: #fff;
+  font-size: 26px;
+}
+
+/* Mobile responsive menu */
+@media (max-width: 768px) {
+  .nav ul {
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background: linear-gradient(180deg, #007bff, #00aaff);
+    flex-direction: column;
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #0056b3;
+    display: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  .nav ul.show {
+    display: block;
+  }
+
+  .nav a {
+    padding: 8px 0;
+  }
+}
+</style>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<header class="header">
+  <div class="logo">
+  <img src="img/hexride.png" width="40"> HexRide
+</div>
+
+  <nav class="nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="product.html">Product</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="menu-btn" onclick="toggleMenu()">☰</div>
+</header>
+
+<main class="container">
+
+  <h1>Contact Us</h1>
+<br>
+  <p>Have questions or need help? Reach out to us using the details below.</p>
+
+  <img src="img/male.png" alt="Customer service representative assisting clients" class="contact-img">
+ <p class="contact-caption">John – Customer Support Specialist</p>
+<br>
+<img src="img/female.png" alt="Customer service representative assisting clients" class="contact-img">
+<p class="contact-caption">Emily – Customer Support Specialist</p>
+<br>
+  <section>
+    <h2>Get in Touch</h2>
+<br>
+    <p>Email: hexride@gmail.com</p>
+    <p>Phone: +91-9876543210 / +91-2345678901</p>
+    <p>Address: Maharashtra, Mumbai, India</p>
+  </section>
+<br>
+
+<style>
+.social-icon {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 50%;
+  background: #333;
+  color: white;
+  margin: 10px;
+  font-size: 24px;
+}
+.social-icon:hover {
+  background: #555;
+}
+</style>
+
+<a href="https://facebook.com" class="social-icon" target="_blank">
+  <i class="fab fa-facebook-f"></i>
+</a>
+
+<a href="https://instagram.com" class="social-icon" target="_blank">
+  <i class="fab fa-instagram"></i>
+</a>
+
+<a href="https://twitter.com" class="social-icon" target="_blank">
+  <i class= "fab fa-x-twitter"></i>
+</a>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- About -->
+    <div class="footer-section">
+      <h3>HexRide</h3>
+      <p>Premium motorcycle helmets designed for comfort, safety, and style.</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-section">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Support -->
+    <div class="footer-section">
+      <h4>Support</h4>
+      <ul>
+        <li><a href="return-policy.html">Return Policy</a></li>
+        <li><a href="warranty.html">Warranty</a></li>
+        <li><a href="faqs.html">FAQs</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-section">
+      <h4>Contact</h4>
+      <p>Email: hexride@gmail.com</p>
+      <p>Phone: +91 9876543210</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; <span id="year"></span> HexRide | All Rights Reserved ®</p>
+  </div>
+</footer>
+
+
+<script>
+  function toggleMenu() {
+    document.querySelector(".nav ul").classList.toggle("show");
+  }
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
