@@ -368,6 +368,19 @@
 
   </div>
 
+  <div class="whatsapp-float">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Chat">
+</div>
+
+<script>
+  // Simple check: This script will run when the form is submitted
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('Thank you! Your message has been sent to HexRide.');
+    this.reset(); // Clears the form
+  });
+</script>
+
   <div class="footer-bottom">
     <p>&copy; <span id="year"></span> HexRide | All Rights Reserved ®</p>
   </div>
@@ -380,22 +393,10 @@
   }
   document.getElementById("year").textContent = new Date().getFullYear();
 </script>
-
-<div class="whatsapp-float">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Chat">
-</div>
-
-<script>
-  // Simple check: This script will run when the form is submitted
-  document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    alert('Thank you! Your message has been sent to HexRide.');
-    this.reset(); // Clears the form
-  });
-</script>
-  
+ 
 </body>
 </html>
+
 
 
 
