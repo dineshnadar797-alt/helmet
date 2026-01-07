@@ -290,7 +290,56 @@ next.addEventListener('click', () => showSlide(currentIndex + 1));
 setInterval(() => showSlide(currentIndex + 1), 5000);
 </script>
 
+<section class="newsletter">
+  <div class="newsletter-content">
+    <h2>Join the HexRide Community</h2>
+    <p>Get exclusive drops, safety tips, and 10% off your first helmet.</p>
+    <form class="newsletter-form">
+      <input type="email" placeholder="Enter your email address" required>
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+</section>
 
+<style>
+.newsletter {
+  background: linear-gradient(90deg, #1a1a1a, #333); /* Dark premium look */
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+  margin-top: 50px;
+}
+.newsletter h2 {
+  margin-bottom: 10px;
+}
+.newsletter-form {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.newsletter-form input {
+  padding: 12px;
+  width: 300px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+.newsletter-form button {
+  padding: 12px 25px;
+  background: #ffd700; /* Gold accent */
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #000;
+  transition: transform 0.2s;
+}
+.newsletter-form button:hover {
+  transform: scale(1.05);
+}
+</style>
 
 
 <footer class="footer">
@@ -398,5 +447,6 @@ document.querySelectorAll('.scroll-box').forEach(box => {
 
 </body>
 </html>
+
 
 
