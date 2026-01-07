@@ -396,20 +396,22 @@
 
 <style>
 .whatsapp-fixed-icon {
-  position: fixed;      /* Keeps it in one spot when scrolling */
-  bottom: 30px;         /* Distance from bottom */
-  right: 30px;          /* Distance from right */
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
   width: 60px;
   height: 60px;
   background-color: #25d366;
   border-radius: 50%;
-  display: flex !important; /* Ensures it shows up */
+  display: flex !important;
   align-items: center;
   justify-content: center;
-  z-index: 9999;        /* Puts it on top of all other elements */
+  z-index: 9999;
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  pointer-events: none; /* Makes it NOT clickable */
-  user-select: none;    /* Prevents selecting the icon like text */
+  pointer-events: none;
+  user-select: none;
+  /* Re-added Animation */
+  animation: pulse-green 2s infinite;
 }
 
 .whatsapp-fixed-icon img {
@@ -418,12 +420,26 @@
   display: block;
 }
 
-/* Ensure it stays visible on mobile without changing size */
+/* Pulse Animation Logic */
+@keyframes pulse-green {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
 @media (max-width: 768px) {
   .whatsapp-fixed-icon {
-    bottom: 30px !important;
-    right: 30px !important;
-    display: flex !important;
+    bottom: 20px !important;
+    right: 20px !important;
   }
 }
 </style>
@@ -431,6 +447,7 @@
  
 </body>
 </html>
+
 
 
 
