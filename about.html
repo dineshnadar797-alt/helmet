@@ -74,6 +74,30 @@
     padding: 8px 0;
   }
 }
+
+.about-slider {
+  width: 100%;
+  overflow: hidden;
+  background: #fff;
+  padding: 20px 0;
+}
+.about-slide-track {
+  display: flex;
+  width: calc(250px * 10); /* Adjust based on image width */
+  animation: scroll 20s linear infinite;
+}
+.about-slide-track img {
+  width: 250px;
+  height: 150px;
+  object-fit: cover;
+  margin: 0 10px;
+  border-radius: 10px;
+}
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-250px * 5)); }
+}  
+  
 </style>
 
 
@@ -276,6 +300,7 @@ HexRide is more than just a brand; it’s a community of riders who value safety
   
 </body>
 </html>
+
 
 
 
