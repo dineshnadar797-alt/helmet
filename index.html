@@ -341,6 +341,47 @@ setInterval(() => showSlide(currentIndex + 1), 5000);
 }
 </style>
 
+<button id="backToTop" onclick="scrollToTop()">↑</button>
+
+<style>
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  display: none; /* Hidden by default */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 1000;
+  transition: background 0.3s;
+}
+#backToTop:hover {
+  background-color: #0056b3;
+}
+</style>
+
+<script>
+// Show button when scrolling down
+window.onscroll = function() {
+  const btn = document.getElementById("backToTop");
+  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+    btn.style.display = "block";
+  } else {
+    btn.style.display = "none";
+  }
+};
+
+// Scroll to top function
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>  
+
 <footer class="footer">
   <div class="footer-container">
 
@@ -446,6 +487,7 @@ document.querySelectorAll('.scroll-box').forEach(box => {
 
 </body>
 </html>
+
 
 
 
