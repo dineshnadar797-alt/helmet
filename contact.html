@@ -377,6 +377,19 @@
   });
 </script>
 
+  <div class="footer-bottom">
+    <p>&copy; <span id="year"></span> HexRide | All Rights Reserved ®</p>
+  </div>
+</footer>
+
+
+<script>
+  function toggleMenu() {
+    document.querySelector(".nav ul").classList.toggle("show");
+  }
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
   <div class="whatsapp-fixed-icon">
   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Support">
 </div>
@@ -415,21 +428,10 @@
 }
 </style>
 
-  <div class="footer-bottom">
-    <p>&copy; <span id="year"></span> HexRide | All Rights Reserved ®</p>
-  </div>
-</footer>
-
-
-<script>
-  function toggleMenu() {
-    document.querySelector(".nav ul").classList.toggle("show");
-  }
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
  
 </body>
 </html>
+
 
 
 
