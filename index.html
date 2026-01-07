@@ -485,8 +485,128 @@ document.querySelectorAll('.scroll-box').forEach(box => {
 });
 </script>
 
+<div id="fomo-notification" class="fomo-popup">
+  <div class="fomo-img">🛍️</div>
+  <div class="fomo-text">
+    <span class="fomo-name">Someone in Mumbai</span>
+    <span class="fomo-desc">just ordered a <b>StormX Ultra</b></span>
+    <span class="fomo-time">2 minutes ago</span>
+  </div>
+</div>
+
+<style>
+.fomo-popup {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  z-index: 9999;
+  transform: translateY(150%); /* Hidden initially */
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  max-width: 300px;
+  border-left: 4px solid #007bff;
+  font-family: sans-serif;
+}
+
+.fomo-popup.show {
+  transform: translateY(0);
+}
+
+.fomo-img {
+  font-size: 24px;
+  background: #f0f8ff;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.fomo-text {
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+  color: #333;
+}
+
+.fomo-name { font-weight: bold; color: #007bff; }
+.fomo-time { font-size: 11px; color: #888; margin-top: 2px; }
+</style>
+
+<script>
+const fomoPopup = document.getElementById('fomo-notification');
+const locations = ['Delhi', 'Mumbai', 'Bangalore', 'Pune', 'Chennai', 'Hyderabad'];
+const products = ['Rider Pro Black', 'StormX Ultra', 'FireEdge Red', 'ThunderStrike Pro', 'Titan Glide'];
+
+function showNotification() {
+  // 1. Randomize Content
+  const randomLoc = locations[Math.floor(Math.random() * locations.length)];
+  const randomProd = products[Math.floor(Math.random() * products.length)];
+  const timeAgo = Math.floor(Math.random() * 59) + 1;
+
+  fomoPopup.querySelector('.fomo-name').innerText = `Someone in ${randomLoc}`;
+  fomoPopup.querySelector('.fomo-desc').innerHTML = `just ordered a <b>${randomProd}</b>`;
+  fomoPopup.querySelector('.fomo-time').innerText = `${timeAgo} minutes ago`;
+
+  // 2. Show Popup
+  fomoPopup.classList.add('show');
+
+  // 3. Hide after 4 seconds
+  setTimeout(() => {
+    fomoPopup.classList.remove('show');
+  }, 4000);
+}
+
+// Start loop: Show every 10 to 20 seconds
+setInterval(showNotification, 12000); // 12 seconds
+// Show first one after 3 seconds
+setTimeout(showNotification, 3000);
+</script>
+
+<a href="https://wa.me/919876543210" target="_blank" class="whatsapp-float">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Chat on WhatsApp">
+</a>
+
+<style>
+.whatsapp-float {
+  position: fixed;
+  bottom: 90px; /* Positioned above the "Back to Top" button */
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background-color: #25d366;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s;
+  animation: pulse 2s infinite;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-float img {
+  width: 35px;
+  height: 35px;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+  70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+</style>
+  
 </body>
 </html>
+
 
 
 
