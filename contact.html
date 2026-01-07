@@ -384,28 +384,30 @@
 
 <div class="whatsapp-float">
   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Chat on WhatsApp">
-</a>
+</div>
 
 <style>
 .whatsapp-float {
   position: fixed;
-  bottom: 90px; /* Positioned above the "Back to Top" button */
+  /* Match the 90px height of your Index/About pages */
+  bottom: 90px; 
   right: 30px;
   width: 60px;
   height: 60px;
   background-color: #25d366;
   border-radius: 50%;
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  z-index: 1000;
-  display: flex;
+  z-index: 1100; /* Stays above the back-to-top button */
+  display: flex !important;
   align-items: center;
   justify-content: center;
   transition: transform 0.3s;
-  animation: pulse 2s infinite;
-}
-
-.whatsapp-float:hover {
-  transform: scale(1.1);
+  
+  /* Applying BOTH pulse (glow) and bounce (movement) */
+  animation: pulse 2s infinite, indexBounce 2s infinite;
+  
+  /* Makes it non-clickable as per your request */
+  pointer-events: none; 
 }
 
 .whatsapp-float img {
@@ -413,10 +415,38 @@
   height: 35px;
 }
 
+/* 1. Pulse Animation (Glow effect) */
 @keyframes pulse {
   0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
   70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
   100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+/* 2. Bounce Animation (Up & Down movement) */
+@keyframes indexBounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-12px); /* Moves up */
+  }
+  60% {
+    transform: translateY(-6px); /* Half bounce */
+  }
+}
+
+/* Hover effect if you ever enable pointer-events */
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .whatsapp-float {
+    bottom: 80px;
+    right: 20px;
+    width: 55px;
+    height: 55px;
+  }
 }
 </style>
   
@@ -430,6 +460,7 @@
    
 </body>
 </html>
+
 
 
 
