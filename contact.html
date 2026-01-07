@@ -276,17 +276,17 @@
 <div class="social-container">
   <h3>Follow Our Journey</h3>
   <div class="social-wrapper">
-    <a href="https://facebook.com/hexride" class="social-icon fb" target="_blank">
+    <div class="social-icon fb">
       <i class="fab fa-facebook-f"></i>
-    </a>
+    </div>
 
-    <a href="https://instagram.com/hexride" class="social-icon ig" target="_blank">
+    <div class="social-icon ig">
       <i class="fab fa-instagram"></i>
-    </a>
+    </div>
 
-    <a href="https://twitter.com/hexride" class="social-icon tw" target="_blank">
+    <div class="social-icon tw">
       <i class="fab fa-x-twitter"></i>
-    </a>
+    </div>
   </div>
 </div>
 
@@ -315,14 +315,10 @@
   border-radius: 50%;
   color: white;
   font-size: 24px;
-  text-decoration: none;
-  transition: all 0.3s ease;
+  /* Key change: makes it non-clickable */
+  pointer-events: none; 
+  cursor: default;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.social-icon:hover {
-  transform: translateY(-5px) scale(1.1);
-  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
 }
 
 /* Official Brand Colors */
@@ -400,6 +396,7 @@
   
 </body>
 </html>
+
 
 
 
