@@ -138,14 +138,49 @@ HexRide is more than just a brand; it’s a community of riders who value safety
   </section>
 <br>
   <section>
-    <h2>Our Values</h2>
-<br>
-    <ul>
-      <li>Integrity</li>
-      <li>Customer-first thinking</li>
-      <li>Continuous improvement</li>
-    </ul>
-  </section>
+  <h2>Our Values</h2>
+  <br>
+  <div class="values-grid">
+    <div class="value-card">
+      <h3>Integrity</h3>
+      <p>Honesty and transparency in every helmet we build.</p>
+    </div>
+    <div class="value-card">
+      <h3>Customer-First</h3>
+      <p>Your safety and satisfaction drive our innovation.</p>
+    </div>
+    <div class="value-card">
+      <h3>Improvement</h3>
+      <p>Constantly evolving our tech for better protection.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+.value-card {
+  padding: 30px;
+  background: #f8f9fa;
+  border-bottom: 4px solid #007bff;
+  border-radius: 8px;
+  text-align: center;
+  transition: 0.3s;
+}
+.value-card:hover {
+  transform: translateY(-5px);
+  background: #fff;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+.value-card h3 {
+  color: #007bff;
+  margin-bottom: 10px;
+}
+</style>
 
 </main>
 
@@ -241,6 +276,7 @@ HexRide is more than just a brand; it’s a community of riders who value safety
   
 </body>
 </html>
+
 
 
 
