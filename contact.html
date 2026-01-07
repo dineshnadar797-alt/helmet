@@ -382,57 +382,41 @@
   </div>
 </footer>
 
-<div class="whatsapp-fixed-icon">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Support">
-</div>
+<div class="whatsapp-float">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Chat on WhatsApp">
+</a>
 
 <style>
-.whatsapp-fixed-icon {
+.whatsapp-float {
   position: fixed;
-  bottom: 30px;
+  bottom: 90px; /* Positioned above the "Back to Top" button */
   right: 30px;
   width: 60px;
   height: 60px;
   background-color: #25d366;
   border-radius: 50%;
-  display: flex !important;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 1000;
+  display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 9999;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  pointer-events: none;
-  user-select: none;
-  /* Re-added Animation */
-  animation: pulse-green 2s infinite;
+  transition: transform 0.3s;
+  animation: pulse 2s infinite;
 }
 
-.whatsapp-fixed-icon img {
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-float img {
   width: 35px;
   height: 35px;
-  display: block;
 }
 
-/* Pulse Animation Logic */
-@keyframes pulse-green {
-  0% {
-    transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
-  }
-  70% {
-    transform: scale(1);
-    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
-  }
-  100% {
-    transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-  }
-}
-
-@media (max-width: 768px) {
-  .whatsapp-fixed-icon {
-    bottom: 20px !important;
-    right: 20px !important;
-  }
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+  70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
 }
 </style>
   
@@ -446,6 +430,7 @@
    
 </body>
 </html>
+
 
 
 
