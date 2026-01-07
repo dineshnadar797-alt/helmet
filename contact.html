@@ -367,11 +367,7 @@
     </div>
 
   </div>
-
-  <div class="whatsapp-float">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Chat">
-</div>
-
+ 
 <script>
   // Simple check: This script will run when the form is submitted
   document.getElementById('contactForm').addEventListener('submit', function(e) {
@@ -380,6 +376,44 @@
     this.reset(); // Clears the form
   });
 </script>
+
+  <div class="whatsapp-fixed-icon">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Support">
+</div>
+
+<style>
+.whatsapp-fixed-icon {
+  position: fixed;      /* Keeps it in one spot when scrolling */
+  bottom: 30px;         /* Distance from bottom */
+  right: 30px;          /* Distance from right */
+  width: 60px;
+  height: 60px;
+  background-color: #25d366;
+  border-radius: 50%;
+  display: flex !important; /* Ensures it shows up */
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;        /* Puts it on top of all other elements */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  pointer-events: none; /* Makes it NOT clickable */
+  user-select: none;    /* Prevents selecting the icon like text */
+}
+
+.whatsapp-fixed-icon img {
+  width: 35px;
+  height: 35px;
+  display: block;
+}
+
+/* Ensure it stays visible on mobile without changing size */
+@media (max-width: 768px) {
+  .whatsapp-fixed-icon {
+    bottom: 30px !important;
+    right: 30px !important;
+    display: flex !important;
+  }
+}
+</style>
 
   <div class="footer-bottom">
     <p>&copy; <span id="year"></span> HexRide | All Rights Reserved ®</p>
@@ -396,6 +430,7 @@
  
 </body>
 </html>
+
 
 
 
