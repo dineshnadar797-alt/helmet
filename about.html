@@ -261,13 +261,12 @@ HexRide is more than just a brand; it’s a community of riders who value safety
 </script>
 
 <div class="whatsapp-float">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Chat on WhatsApp">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Chat">
 </div>
 
 <style>
 .whatsapp-float {
   position: fixed;
-  /* Match the 90px height of your Index/About pages */
   bottom: 90px; 
   right: 30px;
   width: 60px;
@@ -275,17 +274,26 @@ HexRide is more than just a brand; it’s a community of riders who value safety
   background-color: #25d366;
   border-radius: 50%;
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  z-index: 1100; /* Stays above the back-to-top button */
+  z-index: 2000;
   display: flex !important;
   align-items: center;
   justify-content: center;
-  transition: transform 0.3s;
   
-  /* Applying BOTH pulse (glow) and bounce (movement) */
+  /* Standard animations */
   animation: pulse 2s infinite, indexBounce 2s infinite;
   
-  /* Makes it non-clickable as per your request */
-  pointer-events: none; 
+  /* This allows the mouse to "see" the icon so it can grow */
+  pointer-events: auto; 
+  cursor: default; /* Keeps the arrow pointer instead of the hand link pointer */
+  
+  transition: all 0.3s ease; /* Makes the "getting big" smooth */
+}
+
+/* THE HOVER EFFECT: This makes it get big */
+.whatsapp-float:hover {
+  transform: scale(1.3) !important; /* Increases size by 30% */
+  animation: none; /* Stops the bouncing when you are looking at it */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
 }
 
 .whatsapp-float img {
@@ -293,43 +301,23 @@ HexRide is more than just a brand; it’s a community of riders who value safety
   height: 35px;
 }
 
-/* 1. Pulse Animation (Glow effect) */
+/* Animations */
+@keyframes indexBounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-12px); }
+  60% { transform: translateY(-6px); }
+}
+
 @keyframes pulse {
   0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
   70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
   100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
 }
-
-/* 2. Bounce Animation (Up & Down movement) */
-@keyframes indexBounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-12px); /* Moves up */
-  }
-  60% {
-    transform: translateY(-6px); /* Half bounce */
-  }
-}
-
-/* Hover effect if you ever enable pointer-events */
-.whatsapp-float:hover {
-  transform: scale(1.1);
-}
-
-@media (max-width: 768px) {
-  .whatsapp-float {
-    bottom: 80px;
-    right: 20px;
-    width: 55px;
-    height: 55px;
-  }
-}
 </style>
   
 </body>
 </html>
+
 
 
 
