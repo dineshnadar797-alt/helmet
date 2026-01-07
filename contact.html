@@ -104,14 +104,19 @@
 <br>
   <p>Have questions or need help? Reach out to us using the details below.</p>
 
- <div class="support-team">
+<div class="support-team">
   <div class="team-member">
-    <img src="img/male.png" alt="John">
+    <div class="img-container">
+      <img src="img/male.png" alt="John">
+    </div>
     <h3>John</h3>
     <p>Support Specialist</p>
   </div>
+  
   <div class="team-member">
-    <img src="img/female.png" alt="Emily">
+    <div class="img-container">
+      <img src="img/female.png" alt="Emily">
+    </div>
     <h3>Emily</h3>
     <p>Support Specialist</p>
   </div>
@@ -121,30 +126,61 @@
 .support-team {
   display: flex;
   justify-content: center;
+  align-items: flex-start; /* Ensures they start at the same top level */
   gap: 40px;
-  margin-bottom: 50px;
+  margin: 50px 0;
   flex-wrap: wrap;
 }
+
 .team-member {
   text-align: center;
-  background: #fdfdfd;
-  padding: 20px;
+  background: #ffffff;
+  padding: 30px;
   border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  width: 200px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  width: 220px;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column; /* Stacks image, name, and text vertically */
+  align-items: center;    /* Centers everything horizontally */
 }
-.team-member img {
+
+.team-member:hover {
+  transform: translateY(-10px);
+}
+
+.img-container {
   width: 120px;
   height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #007bff;
   margin-bottom: 15px;
+  border-radius: 50%;
+  border: 3px solid #007bff;
+  overflow: hidden; /* Keeps the image inside the circle */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.team-member h3 { margin: 5px 0; font-size: 1.2rem; }
-.team-member p { color: #666; font-size: 0.9rem; }
+
+.team-member img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Prevents the face from looking squashed */
+}
+
+.team-member h3 { 
+  margin: 10px 0 5px 0; 
+  font-size: 1.3rem;
+  color: #333;
+}
+
+.team-member p { 
+  color: #007bff; 
+  font-size: 0.9rem; 
+  font-weight: 500;
+  margin: 0;
+}
 </style>
-<br>
+
   <section>
     <h2>Get in Touch</h2>
 <br>
@@ -460,6 +496,7 @@
    
 </body>
 </html>
+
 
 
 
