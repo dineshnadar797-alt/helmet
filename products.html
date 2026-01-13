@@ -89,6 +89,48 @@
   box-shadow: 0 0 6px rgba(0, 170, 255, 0.3);
 }
 
+/* --- PRODUCT CARD INTERACTIONS --- */
+
+/* --- ENHANCED PRODUCT CARD --- */
+.product-card {
+  position: relative; 
+  overflow: hidden; /* Clips the zooming image */
+  background: #fff;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Card Lift & Shadow on Hover */
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* Image Zoom */
+.product-card img {
+  width: 100%;
+  transition: transform 0.5s ease;
+}
+
+.product-card:hover img {
+  transform: scale(1.1); /* Subtle 10% zoom */
+}
+
+/* Sale Badge */
+.sale-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px; /* Moved to left to avoid clashing with other icons */
+  background: #ff4757;
+  color: white;
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 4px;
+  z-index: 5; /* Stays above image */
+  pointer-events: none; /* Mouse goes "through" it to trigger zoom */
+}
+
 </style>
 
 
@@ -148,10 +190,11 @@
     </div>
 
     <div class="product-card">
+      <span class="sale-badge">Sale</span>
       <img src="img/stormx.png" alt="StormX Helmet" class="responsive-img">
       <h3>StormX Ultra</h3>
       <p>ISI-approved helmet with heavy-duty ABS shell.</p>
-      <p>Price: 4500/-</p>
+      <p>Price: <del style="color:red; font-size: 0.9em;">6500/-</del> <b>5000/-</b></p>
       <a href="order.html?product=StormX Ultra" class="btn">Order Now</a>
 
     </div>
@@ -464,6 +507,7 @@ setTimeout(showNotification, 3000);
   
 </body>
 </html>
+
 
 
 
