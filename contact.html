@@ -445,8 +445,9 @@
   /* Applying BOTH pulse (glow) and bounce (movement) */
   animation: pulse 2s infinite, indexBounce 2s infinite;
   
-  /* Makes it non-clickable as per your request */
-  pointer-events: none; 
+   /* This allows the mouse to "see" the icon so it can grow */
+  pointer-events: auto; 
+  cursor: default; /* Keeps the arrow pointer instead of the hand link pointer */
 }
 
 .whatsapp-float img {
@@ -592,6 +593,7 @@ window.onclick = function(event) {
 </script>  
 </body>
 </html>
+
 
 
 
