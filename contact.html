@@ -415,47 +415,6 @@
     </div>
 
   </div>
-</footer>
- <div id="thankYouModal" class="modal-overlay">
-  <div class="modal-content">
-    <div class="checkmark-circle">
-      <i class="fas fa-check"></i>
-    </div>
-    <h2>Message Sent!</h2>
-    <p>Thank you for reaching out to **HexRide**. Our team will get back to you within 24 hours.</p>
-    <button onclick="closeModal()" class="close-modal-btn">Close</button>
-  </div>
-</div>
-<script>  
-const modal = document.getElementById('thankYouModal');
-const contactForm = document.getElementById('contactForm');
-
-contactForm.addEventListener('submit', function(e) {
-  e.preventDefault();
-  
-  const btn = document.querySelector('.submit-btn');
-  btn.innerHTML = "Sending...";
-  btn.disabled = true;
-
-  // Simulate an API call
-  setTimeout(() => {
-    modal.style.display = 'flex'; // Show Modal
-    btn.innerHTML = "Send Message";
-    btn.disabled = false;
-    contactForm.reset();
-  }, 1200);
-});
-
-function closeModal() {
-  modal.style.display = 'none';
-}
-
-// Close modal if user clicks outside of the white box
-window.onclick = function(event) {
-  if (event.target == modal) {
-    closeModal();
-  }
-}
 
   <div class="footer-bottom">
     <p>&copy; <span id="year"></span> HexRide | All Rights Reserved ®</p>
@@ -590,9 +549,50 @@ window.onclick = function(event) {
   document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 
+<div id="thankYouModal" class="modal-overlay">
+  <div class="modal-content">
+    <div class="checkmark-circle">
+      <i class="fas fa-check"></i>
+    </div>
+    <h2>Message Sent!</h2>
+    <p>Thank you for reaching out to **HexRide**. Our team will get back to you within 24 hours.</p>
+    <button onclick="closeModal()" class="close-modal-btn">Close</button>
+  </div>
+</div>
+<script>  
+const modal = document.getElementById('thankYouModal');
+const contactForm = document.getElementById('contactForm');
+
+contactForm.addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  const btn = document.querySelector('.submit-btn');
+  btn.innerHTML = "Sending...";
+  btn.disabled = true;
+
+  // Simulate an API call
+  setTimeout(() => {
+    modal.style.display = 'flex'; // Show Modal
+    btn.innerHTML = "Send Message";
+    btn.disabled = false;
+    contactForm.reset();
+  }, 1200);
+});
+
+function closeModal() {
+  modal.style.display = 'none';
+}
+
+// Close modal if user clicks outside of the white box
+window.onclick = function(event) {
+  if (event.target == modal) {
+    closeModal();
+  }
+}
    
 </body>
 </html>
+
 
 
 
