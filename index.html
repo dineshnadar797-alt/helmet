@@ -1,619 +1,1235 @@
-this is my home page code, i want to improve the navigation bar looks and aesthetics: <!doctype html>
+!doctype html>
+
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>HexRide - Motorcycle Helmets</title>
+
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>HexRide - Motorcycle Helmets</title>
+
 <link rel="icon" type="image/x-icon" href="img/hexride.png">
-  <meta name="description" content="Premium motorcycle helmets for maximum safety, comfort, and style. Explore top-rated helmets designed for every rider.">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/responsive-fix.css">
+
+  <meta name="description" content="Premium motorcycle helmets for maximum safety, comfort, and style. Explore top-rated helmets designed for every rider.">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="stylesheet" href="css/responsive-fix.css">
+
 <style>
+
 /* Navbar with gradient background */
+
 .header {
-  background: linear-gradient(90deg, #007bff, #00aaff); /* HexRide gradient blue */
-  border-bottom: 2px solid #0056b3;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  transition: background 0.3s, box-shadow 0.3s;
+
+  background: linear-gradient(90deg, #007bff, #00aaff); /* HexRide gradient blue */
+
+  border-bottom: 2px solid #0056b3;
+
+  position: sticky;
+
+  top: 0;
+
+  z-index: 1000;
+
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+
+  transition: background 0.3s, box-shadow 0.3s;
+
 }
+
+
 
 .header:hover {
-  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+
 }
+
+
 
 .logo {
-  color: #fff;
-  font-weight: bold;
-  font-size: 22px;
-  text-decoration: none; /* Removes the underline */
-  display: flex;         /* Keeps image and text aligned */
-  align-items: center;
-  gap: 10px;            /* Adds a little space between logo and text */
+
+  color: #fff;
+
+  font-weight: bold;
+
+  font-size: 22px;
+
+  text-decoration: none; /* Removes the underline */
+
+  display: flex;         /* Keeps image and text aligned */
+
+  align-items: center;
+
+  gap: 10px;            /* Adds a little space between logo and text */
+
 }
+
+
 
 /* Optional: Subtle hover effect for the logo */
+
 .logo:hover {
-  opacity: 0.9;
+
+  opacity: 0.9;
+
 }
+
+
 
 .nav a {
-  color: #fff;
-  font-weight: 500;
-  transition: color 0.3s, transform 0.2s;
+
+  color: #fff;
+
+  font-weight: 500;
+
+  transition: color 0.3s, transform 0.2s;
+
 }
+
+
 
 .nav a:hover,
+
 .nav a.active {
-  color: #ffd700; /* Gold on hover or active */
-  transform: scale(1.1);
+
+  color: #ffd700; /* Gold on hover or active */
+
+  transform: scale(1.1);
+
 }
+
+
 
 /* Mobile menu button */
+
 .menu-btn {
-  color: #fff;
-  font-size: 26px;
+
+  color: #fff;
+
+  font-size: 26px;
+
 }
+
+
 
 /* Mobile responsive menu */
+
 @media (max-width: 768px) {
-  .nav ul {
-    position: absolute;
-    top: 60px;
-    right: 10px;
-    background: linear-gradient(180deg, #007bff, #00aaff);
-    flex-direction: column;
-    width: 200px;
-    padding: 10px;
-    border: 1px solid #0056b3;
-    display: none;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  }
 
-  .nav ul.show {
-    display: block;
-  }
+  .nav ul {
 
-  .nav a {
-    padding: 8px 0;
-  }
+    position: absolute;
+
+    top: 60px;
+
+    right: 10px;
+
+    background: linear-gradient(180deg, #007bff, #00aaff);
+
+    flex-direction: column;
+
+    width: 200px;
+
+    padding: 10px;
+
+    border: 1px solid #0056b3;
+
+    display: none;
+
+    border-radius: 5px;
+
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+
+  }
+
+
+
+  .nav ul.show {
+
+    display: block;
+
+  }
+
+
+
+  .nav a {
+
+    padding: 8px 0;
+
+  }
+
 }
+
 </style>
+
+
+
 
 
 </head>
 
-<body>
-<header class="header">
-  <a href="index.html" class="logo">
-    <img src="img/hexride.png" width="40" alt="HexRide Logo"> HexRide
-  </a>
 
-  <nav class="nav">
-    <ul>
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="products.html">Products</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-  <div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+<body>
+
+<header class="header">
+
+  <a href="index.html" class="logo">
+
+    <img src="img/hexride.png" width="40" alt="HexRide Logo"> HexRide
+
+  </a>
+
+
+
+  <nav class="nav">
+
+    <ul>
+
+      <li><a href="index.html" class="active">Home</a></li>
+
+      <li><a href="products.html">Products</a></li>
+
+      <li><a href="about.html">About</a></li>
+
+      <li><a href="contact.html">Contact</a></li>
+
+    </ul>
+
+  </nav>
+
+  <div class="menu-btn" onclick="toggleMenu()">☰</div>
+
 </header>
 
+
+
 <!-- HERO SECTION -->
+
 <section class="hero">
-  <img src="img/helmet.jpg" alt="Premium motorcycle helmet on display" class="small-img">
-  <div class="hero-text">
-    <h1>Premium Motorcycle Helmets</h1>
-    <p>Ride with confidence. Protect yourself with world-class helmets engineered for safety and style.</p>
-  </div>
+
+  <img src="img/helmet.jpg" alt="Premium motorcycle helmet on display" class="small-img">
+
+  <div class="hero-text">
+
+    <h1>Premium Motorcycle Helmets</h1>
+
+    <p>Ride with confidence. Protect yourself with world-class helmets engineered for safety and style.</p>
+
+  </div>
+
 </section>
+
+
 
 <div class="trust-bar">
-  <div class="trust-item">
-    <span style="font-size: 30px;">🛡️</span>
-    <div>
-      <strong>ISI Certified</strong>
-      <p>Safety Standards Approved</p>
-    </div>
-  </div>
-  <div class="trust-item">
-    <span style="font-size: 30px;">🚚</span>
-    <div>
-      <strong>Free Shipping</strong>
-      <p>On all orders over $50</p>
-    </div>
-  </div>
-  <div class="trust-item">
-    <span style="font-size: 30px;">🔄</span>
-    <div>
-      <strong>30-Day Returns</strong>
-      <p>Hassle-free exchange</p>
-    </div>
-  </div>
-  <div class="trust-item">
-    <span style="font-size: 30px;">🎧</span>
-    <div>
-      <strong>24/7 Support</strong>
-      <p>We are here to help</p>
-    </div>
-  </div>
+
+  <div class="trust-item">
+
+    <span style="font-size: 30px;">🛡️</span>
+
+    <div>
+
+      <strong>ISI Certified</strong>
+
+      <p>Safety Standards Approved</p>
+
+    </div>
+
+  </div>
+
+  <div class="trust-item">
+
+    <span style="font-size: 30px;">🚚</span>
+
+    <div>
+
+      <strong>Free Shipping</strong>
+
+      <p>On all orders over $50</p>
+
+    </div>
+
+  </div>
+
+  <div class="trust-item">
+
+    <span style="font-size: 30px;">🔄</span>
+
+    <div>
+
+      <strong>30-Day Returns</strong>
+
+      <p>Hassle-free exchange</p>
+
+    </div>
+
+  </div>
+
+  <div class="trust-item">
+
+    <span style="font-size: 30px;">🎧</span>
+
+    <div>
+
+      <strong>24/7 Support</strong>
+
+      <p>We are here to help</p>
+
+    </div>
+
+  </div>
+
 </div>
 
+
+
 <style>
+
 .trust-bar {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  padding: 40px 10%;
-  background: #f0f8ff; /* Light blue tint to match your theme */
-  border-bottom: 1px solid #e1e1e1;
+
+  display: flex;
+
+  justify-content: space-around;
+
+  flex-wrap: wrap;
+
+  padding: 40px 10%;
+
+  background: #f0f8ff; /* Light blue tint to match your theme */
+
+  border-bottom: 1px solid #e1e1e1;
+
 }
+
 .trust-item {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  min-width: 200px;
-  margin: 10px 0;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  min-width: 200px;
+
+  margin: 10px 0;
+
 }
+
 .trust-item strong {
-  display: block;
-  font-size: 1.1rem;
-  color: #333;
+
+  display: block;
+
+  font-size: 1.1rem;
+
+  color: #333;
+
 }
+
 .trust-item p {
-  font-size: 0.9rem;
-  color: #666;
-  margin: 0;
+
+  font-size: 0.9rem;
+
+  color: #666;
+
+  margin: 0;
+
 }
-</style>  
+
+</style>  
+
+
 
 <!-- FEATURED PRODUCT SECTION -->
+
 <section id="featured" class="container">
-  <h2>Featured Helmet</h2>
-  <div class="featured-box">
-    <img src="img/stormx.png" alt="High-quality motorcycle helmet close-up" class="responsive-img">
-    <div>
-      <h3>StormX Ultra Protection Helmet</h3>
-      <p>Designed with high-impact ABS shell, dual-visor protection, superior ventilation, and ISI-certified safety. Perfect for daily commuting and long rides.</p>
-      <ul>
-        <li>High-impact ABS shell</li>
-        <li>Scratch-resistant visor</li>
-        <li>Advanced airflow ventilation</li>
-        <li>Sweat-absorbent inner padding</li>
-      </ul>
-      <a href="products.html" class="btn">Explore</a>
-    </div>
-  </div>
+
+  <h2>Featured Helmet</h2>
+
+  <div class="featured-box">
+
+    <img src="img/stormx.png" alt="High-quality motorcycle helmet close-up" class="responsive-img">
+
+    <div>
+
+      <h3>StormX Ultra Protection Helmet</h3>
+
+      <p>Designed with high-impact ABS shell, dual-visor protection, superior ventilation, and ISI-certified safety. Perfect for daily commuting and long rides.</p>
+
+      <ul>
+
+        <li>High-impact ABS shell</li>
+
+        <li>Scratch-resistant visor</li>
+
+        <li>Advanced airflow ventilation</li>
+
+        <li>Sweat-absorbent inner padding</li>
+
+      </ul>
+
+      <a href="products.html" class="btn">Explore</a>
+
+    </div>
+
+  </div>
+
 </section>
+
+
 
 <!-- PRODUCT GRID SECTION -->
+
 <section class="container product-grid">
-  <h2>Our Helmet Collection</h2>
 
-  <div class="scroll-box">
+  <h2>Our Helmet Collection</h2>
 
-    <div class="product-card">
-      <img src="img/pro-black.png" alt="Black motorcycle helmet" class="responsive-img">
-      <h3>Rider Pro Black</h3>
-      <p>Minimal look with full-face protection.</p>
-    </div>
 
-    <div class="product-card">
-      <img src="img/firered.png" alt="Red glossy motorcycle helmet" class="responsive-img">
-      <h3>FireEdge Red</h3>
-      <p>Sporty and stylish for all riders.</p>
-    </div>
 
-    <div class="product-card">
-      <img src="img/aero.png" alt="White aerodynamic motorcycle helmet" class="responsive-img">
-      <h3>AeroShield White</h3>
-      <p>Lightweight comfort with premium safety.</p>
-    </div>
+  <div class="scroll-box">
 
-    <div class="product-card">
-      <img src="img/thunder.png" alt="ThunderStrike Pro" class="responsive-img">
-      <h3>ThunderStrike Pro</h3>
-      <p>Ultimate safety meets aggressive styling.</p>
-    </div>
 
-    <div class="product-card">
-      <img src="img/titan.png" alt="Titan Glide" class="responsive-img">
-      <h3>Titan Glide</h3>
-      <p>Lightweight comfort with premium safety.</p>
-    </div>
 
-  </div>
+    <div class="product-card">
+
+      <img src="img/pro-black.png" alt="Black motorcycle helmet" class="responsive-img">
+
+      <h3>Rider Pro Black</h3>
+
+      <p>Minimal look with full-face protection.</p>
+
+    </div>
+
+
+
+    <div class="product-card">
+
+      <img src="img/firered.png" alt="Red glossy motorcycle helmet" class="responsive-img">
+
+      <h3>FireEdge Red</h3>
+
+      <p>Sporty and stylish for all riders.</p>
+
+    </div>
+
+
+
+    <div class="product-card">
+
+      <img src="img/aero.png" alt="White aerodynamic motorcycle helmet" class="responsive-img">
+
+      <h3>AeroShield White</h3>
+
+      <p>Lightweight comfort with premium safety.</p>
+
+    </div>
+
+
+
+    <div class="product-card">
+
+      <img src="img/thunder.png" alt="ThunderStrike Pro" class="responsive-img">
+
+      <h3>ThunderStrike Pro</h3>
+
+      <p>Ultimate safety meets aggressive styling.</p>
+
+    </div>
+
+
+
+    <div class="product-card">
+
+      <img src="img/titan.png" alt="Titan Glide" class="responsive-img">
+
+      <h3>Titan Glide</h3>
+
+      <p>Lightweight comfort with premium safety.</p>
+
+    </div>
+
+
+
+  </div>
+
 </section>
 
+
+
 <!-- SAFETY SECTION -->
+
 <section class="container safety">
-  <h2>Why Safety Matters</h2>
+
+  <h2>Why Safety Matters</h2>
+
 <br>
-  <p>Riding a motorcycle is more than just a way to travel—it's an experience of freedom, speed, and connection with the road. But with that freedom comes responsibility. Every ride, whether short or long, carries risks that can be reduced dramatically with proper protection. This is why safety should never be optional.
+
+  <p>Riding a motorcycle is more than just a way to travel—it's an experience of freedom, speed, and connection with the road. But with that freedom comes responsibility. Every ride, whether short or long, carries risks that can be reduced dramatically with proper protection. This is why safety should never be optional.
+
+
 
 A high-quality helmet is the first and most important line of defense for every rider. It protects your head—the most vulnerable part of your body—against impacts, debris, harsh weather, and unpredictable road conditions. Even at low speeds, a helmet can be the difference between a minor accident and a life-changing injury.
 
+
+
 Safety isn’t just about rules and regulations; it’s about protecting your future, your family, and your passion for riding. A good helmet gives you the confidence to enjoy every journey, knowing you’re prepared for whatever the road brings.
 
+
+
 Because at the end of the day, your life is irreplaceable—but a helmet is not.
+
 And when you choose to ride with proper protection, you’re not just following safety—you’re choosing smart, responsible, and fearless riding.</p>
+
 </section>
+
+
 
 <!-- Customer Reviews Carousel -->
+
 <section id="customer-reviews" style="padding: 50px; background: #f9f9f9;">
-  <h2 style="text-align: center; margin-bottom: 40px;">Customer Reviews</h2>
 
-  <div class="carousel-container" style="max-width: 900px; margin: 0 auto; position: relative; overflow: hidden; border-radius: 10px;">
+  <h2 style="text-align: center; margin-bottom: 40px;">Customer Reviews</h2>
 
-    <!-- Slides -->
-    <div class="carousel-slides" style="display: flex; transition: transform 0.5s ease-in-out;">
-      <div class="slide" style="min-width: 100%; box-sizing: border-box; padding: 30px; background:#fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius:10px; text-align:center;">
-        <h3>John Doe</h3>
-        <p style="color: gold;">★ ★ ★ ★ ★</p>
-        <p>"The product quality is amazing! Highly recommend to anyone looking for reliability."</p>
-      </div>
 
-      <div class="slide" style="min-width: 100%; box-sizing: border-box; padding: 30px; background:#fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius:10px; text-align:center;">
-        <h3>Jane Smith</h3>
-        <p style="color: gold;">★ ★ ★ ★ ☆</p>
-        <p>"Great service and fast delivery. The helmet fits perfectly."</p>
-      </div>
 
-      <div class="slide" style="min-width: 100%; box-sizing: border-box; padding: 30px; background:#fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius:10px; text-align:center;">
-        <h3>Mark Wilson</h3>
-        <p style="color: gold;">★ ★ ★ ★ ★</p>
-        <p>"Excellent product and customer support. Will buy again!"</p>
-      </div>
-    </div>
+  <div class="carousel-container" style="max-width: 900px; margin: 0 auto; position: relative; overflow: hidden; border-radius: 10px;">
 
-    <!-- Navigation Buttons -->
-    <button class="prev" style="position: absolute; top:50%; left:10px; transform:translateY(-50%); background:#ccc; border:none; padding:10px; border-radius:50%; cursor:pointer;">‹</button>
-    <button class="next" style="position: absolute; top:50%; right:10px; transform:translateY(-50%); background:#ccc; border:none; padding:10px; border-radius:50%; cursor:pointer;">›</button>
-  </div>
+
+
+    <!-- Slides -->
+
+    <div class="carousel-slides" style="display: flex; transition: transform 0.5s ease-in-out;">
+
+      <div class="slide" style="min-width: 100%; box-sizing: border-box; padding: 30px; background:#fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius:10px; text-align:center;">
+
+        <h3>John Doe</h3>
+
+        <p style="color: gold;">★ ★ ★ ★ ★</p>
+
+        <p>"The product quality is amazing! Highly recommend to anyone looking for reliability."</p>
+
+      </div>
+
+
+
+      <div class="slide" style="min-width: 100%; box-sizing: border-box; padding: 30px; background:#fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius:10px; text-align:center;">
+
+        <h3>Jane Smith</h3>
+
+        <p style="color: gold;">★ ★ ★ ★ ☆</p>
+
+        <p>"Great service and fast delivery. The helmet fits perfectly."</p>
+
+      </div>
+
+
+
+      <div class="slide" style="min-width: 100%; box-sizing: border-box; padding: 30px; background:#fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius:10px; text-align:center;">
+
+        <h3>Mark Wilson</h3>
+
+        <p style="color: gold;">★ ★ ★ ★ ★</p>
+
+        <p>"Excellent product and customer support. Will buy again!"</p>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- Navigation Buttons -->
+
+    <button class="prev" style="position: absolute; top:50%; left:10px; transform:translateY(-50%); background:#ccc; border:none; padding:10px; border-radius:50%; cursor:pointer;">‹</button>
+
+    <button class="next" style="position: absolute; top:50%; right:10px; transform:translateY(-50%); background:#ccc; border:none; padding:10px; border-radius:50%; cursor:pointer;">›</button>
+
+  </div>
+
 </section>
+
+
 
 <!-- JavaScript for carousel -->
+
 <script>
+
 const slides = document.querySelector('.carousel-slides');
+
 const slide = document.querySelectorAll('.slide');
+
 const prev = document.querySelector('.prev');
+
 const next = document.querySelector('.next');
+
 let currentIndex = 0;
 
+
+
 function showSlide(index) {
-  if(index < 0) currentIndex = slide.length - 1;
-  else if(index >= slide.length) currentIndex = 0;
-  else currentIndex = index;
-  slides.style.transform = 'translateX(' + (-currentIndex * 100) + '%)';
+
+  if(index < 0) currentIndex = slide.length - 1;
+
+  else if(index >= slide.length) currentIndex = 0;
+
+  else currentIndex = index;
+
+  slides.style.transform = 'translateX(' + (-currentIndex * 100) + '%)';
+
 }
+
+
 
 // Button navigation
+
 prev.addEventListener('click', () => showSlide(currentIndex - 1));
+
 next.addEventListener('click', () => showSlide(currentIndex + 1));
 
+
+
 // Auto slide every 5 seconds
+
 setInterval(() => showSlide(currentIndex + 1), 5000);
+
 </script>
 
+
+
 <section class="newsletter">
-  <div class="newsletter-content">
-    <h2>Join the HexRide Community</h2>
-    <p>Get exclusive drops, safety tips, and 10% off your first helmet.</p>
-    <form class="newsletter-form">
-      <input type="email" placeholder="Enter your email address" required>
-      <button type="submit">Subscribe</button>
-    </form>
-  </div>
+
+  <div class="newsletter-content">
+
+    <h2>Join the HexRide Community</h2>
+
+    <p>Get exclusive drops, safety tips, and 10% off your first helmet.</p>
+
+    <form class="newsletter-form">
+
+      <input type="email" placeholder="Enter your email address" required>
+
+      <button type="submit">Subscribe</button>
+
+    </form>
+
+  </div>
+
 </section>
 
+
+
 <style>
+
 .newsletter {
-  background: linear-gradient(90deg, #1a1a1a, #333); /* Dark premium look */
-  color: white;
-  padding: 60px 20px;
-  text-align: center;
-  margin-top: 50px;
+
+  background: linear-gradient(90deg, #1a1a1a, #333); /* Dark premium look */
+
+  color: white;
+
+  padding: 60px 20px;
+
+  text-align: center;
+
+  margin-top: 50px;
+
 }
+
 .newsletter h2 {
-  margin-bottom: 10px;
+
+  margin-bottom: 10px;
+
 }
+
 .newsletter-form {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  flex-wrap: wrap;
+
+  margin-top: 20px;
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  flex-wrap: wrap;
+
 }
+
 .newsletter-form input {
-  padding: 12px;
-  width: 300px;
-  border-radius: 5px;
-  border: none;
-  outline: none;
+
+  padding: 12px;
+
+  width: 300px;
+
+  border-radius: 5px;
+
+  border: none;
+
+  outline: none;
+
 }
+
 .newsletter-form button {
-  padding: 12px 25px;
-  background: #ffd700; /* Gold accent */
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  cursor: pointer;
-  color: #000;
-  transition: transform 0.2s;
+
+  padding: 12px 25px;
+
+  background: #ffd700; /* Gold accent */
+
+  border: none;
+
+  border-radius: 5px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  color: #000;
+
+  transition: transform 0.2s;
+
 }
+
 .newsletter-form button:hover {
-  transform: scale(1.05);
+
+  transform: scale(1.05);
+
 }
+
 </style>
+
+
 
 <button id="backToTop" onclick="scrollToTop()">↑</button>
 
+
+
 <style>
+
 #backToTop {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 15px;
-  border-radius: 50%;
-  font-size: 20px;
-  cursor: pointer;
-  display: none; /* Hidden by default */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  z-index: 1000;
-  transition: background 0.3s;
+
+  position: fixed;
+
+  bottom: 30px;
+
+  right: 30px;
+
+  background-color: #007bff;
+
+  color: white;
+
+  border: none;
+
+  padding: 15px;
+
+  border-radius: 50%;
+
+  font-size: 20px;
+
+  cursor: pointer;
+
+  display: none; /* Hidden by default */
+
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+
+  z-index: 1000;
+
+  transition: background 0.3s;
+
 }
+
 #backToTop:hover {
-  background-color: #0056b3;
+
+  background-color: #0056b3;
+
 }
+
 </style>
 
+
+
 <script>
+
 // Show button when scrolling down
+
 window.onscroll = function() {
-  const btn = document.getElementById("backToTop");
-  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-    btn.style.display = "block";
-  } else {
-    btn.style.display = "none";
-  }
+
+  const btn = document.getElementById("backToTop");
+
+  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+
+    btn.style.display = "block";
+
+  } else {
+
+    btn.style.display = "none";
+
+  }
+
 };
 
+
+
 // Scroll to top function
+
 function scrollToTop() {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+
 }
-</script>  
+
+</script>  
+
+
 
 <footer class="footer">
-  <div class="footer-container">
 
-    <!-- About -->
-    <div class="footer-section">
-      <h3>HexRide</h3>
-      <p>Premium motorcycle helmets designed for comfort, safety, and style.</p>
-    </div>
+  <div class="footer-container">
 
-    <!-- Quick Links -->
-    <div class="footer-section">
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="products.html">Products</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
 
-    <!-- Support -->
-    <div class="footer-section">
-      <h4>Support</h4>
-      <ul>
-        <li><a href="return-policy.html">Return Policy</a></li>
-        <li><a href="warranty.html">Warranty</a></li>
-        <li><a href="faqs.html">FAQs</a></li>
-      </ul>
-    </div>
 
-    <!-- Contact -->
-    <div class="footer-section">
-      <h4>Contact</h4>
-      <p>Email: hexride@gmail.com</p>
-      <p>Phone: +91 9876543210</p>
-    </div>
+    <!-- About -->
 
-  </div>
+    <div class="footer-section">
 
-  <div class="footer-bottom">
-    <p>&copy; <span id="year"></span> HexRide | All Rights Reserved ®</p>
-  </div>
+      <h3>HexRide</h3>
+
+      <p>Premium motorcycle helmets designed for comfort, safety, and style.</p>
+
+    </div>
+
+
+
+    <!-- Quick Links -->
+
+    <div class="footer-section">
+
+      <h4>Quick Links</h4>
+
+      <ul>
+
+        <li><a href="index.html">Home</a></li>
+
+        <li><a href="products.html">Products</a></li>
+
+        <li><a href="about.html">About</a></li>
+
+        <li><a href="contact.html">Contact</a></li>
+
+      </ul>
+
+    </div>
+
+
+
+    <!-- Support -->
+
+    <div class="footer-section">
+
+      <h4>Support</h4>
+
+      <ul>
+
+        <li><a href="return-policy.html">Return Policy</a></li>
+
+        <li><a href="warranty.html">Warranty</a></li>
+
+        <li><a href="faqs.html">FAQs</a></li>
+
+      </ul>
+
+    </div>
+
+
+
+    <!-- Contact -->
+
+    <div class="footer-section">
+
+      <h4>Contact</h4>
+
+      <p>Email: hexride@gmail.com</p>
+
+      <p>Phone: +91 9876543210</p>
+
+    </div>
+
+
+
+  </div>
+
+
+
+  <div class="footer-bottom">
+
+    <p>&copy; <span id="year"></span> HexRide | All Rights Reserved ®</p>
+
+  </div>
+
 </footer>
 
+
+
 <script>
+
 function toggleMenu() {
-  document.querySelector(".nav ul").classList.toggle("show");
+
+  document.querySelector(".nav ul").classList.toggle("show");
+
 }
+
 document.getElementById("year").textContent = new Date().getFullYear();
+
 </script>
+
+
 
 <script>
+
 document.querySelectorAll('.scroll-box').forEach(box => {
-  let isDown = false;
-  let startX;
-  let scrollLeft;
 
-  // Mouse down
-  box.addEventListener('mousedown', (e) => {
-    isDown = true;
-    box.classList.add('active');
-    startX = e.pageX - box.offsetLeft;
-    scrollLeft = box.scrollLeft;
-  });
+  let isDown = false;
 
-  // Mouse leave
-  box.addEventListener('mouseleave', () => {
-    isDown = false;
-    box.classList.remove('active');
-  });
+  let startX;
 
-  // Mouse up
-  box.addEventListener('mouseup', () => {
-    isDown = false;
-    box.classList.remove('active');
-  });
+  let scrollLeft;
 
-  // Mouse move
-  box.addEventListener('mousemove', (e) => {
-    if (!isDown) return;
-    e.preventDefault();
-    const x = e.pageX - box.offsetLeft;
-    const walk = (x - startX) * 1.2; // drag speed
-    box.scrollLeft = scrollLeft - walk;
-  });
 
-  /* Touch Controls (Mobile) */
-  let touchStartX = 0;
-  let touchScrollLeft = 0;
 
-  box.addEventListener('touchstart', (e) => {
-    touchStartX = e.touches[0].clientX;
-    touchScrollLeft = box.scrollLeft;
-  });
+  // Mouse down
 
-  box.addEventListener('touchmove', (e) => {
-    const touchX = e.touches[0].clientX;
-    const walk = (touchX - touchStartX) * 1.2;
-    box.scrollLeft = touchScrollLeft - walk;
-  });
+  box.addEventListener('mousedown', (e) => {
+
+    isDown = true;
+
+    box.classList.add('active');
+
+    startX = e.pageX - box.offsetLeft;
+
+    scrollLeft = box.scrollLeft;
+
+  });
+
+
+
+  // Mouse leave
+
+  box.addEventListener('mouseleave', () => {
+
+    isDown = false;
+
+    box.classList.remove('active');
+
+  });
+
+
+
+  // Mouse up
+
+  box.addEventListener('mouseup', () => {
+
+    isDown = false;
+
+    box.classList.remove('active');
+
+  });
+
+
+
+  // Mouse move
+
+  box.addEventListener('mousemove', (e) => {
+
+    if (!isDown) return;
+
+    e.preventDefault();
+
+    const x = e.pageX - box.offsetLeft;
+
+    const walk = (x - startX) * 1.2; // drag speed
+
+    box.scrollLeft = scrollLeft - walk;
+
+  });
+
+
+
+  /* Touch Controls (Mobile) */
+
+  let touchStartX = 0;
+
+  let touchScrollLeft = 0;
+
+
+
+  box.addEventListener('touchstart', (e) => {
+
+    touchStartX = e.touches[0].clientX;
+
+    touchScrollLeft = box.scrollLeft;
+
+  });
+
+
+
+  box.addEventListener('touchmove', (e) => {
+
+    const touchX = e.touches[0].clientX;
+
+    const walk = (touchX - touchStartX) * 1.2;
+
+    box.scrollLeft = touchScrollLeft - walk;
+
+  });
+
 });
+
 </script>
+
+
 
 <div id="fomo-notification" class="fomo-popup">
-  <div class="fomo-img">🛍️</div>
-  <div class="fomo-text">
-    <span class="fomo-name">Someone in Mumbai</span>
-    <span class="fomo-desc">just ordered a <b>StormX Ultra</b></span>
-    <span class="fomo-time">2 minutes ago</span>
-  </div>
+
+  <div class="fomo-img">🛍️</div>
+
+  <div class="fomo-text">
+
+    <span class="fomo-name">Someone in Mumbai</span>
+
+    <span class="fomo-desc">just ordered a <b>StormX Ultra</b></span>
+
+    <span class="fomo-time">2 minutes ago</span>
+
+  </div>
+
 </div>
 
+
+
 <style>
+
 .fomo-popup {
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
-  background: white;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  z-index: 9999;
-  transform: translateY(150%); /* Hidden initially */
-  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  max-width: 300px;
-  border-left: 4px solid #007bff;
-  font-family: sans-serif;
+
+  position: fixed;
+
+  bottom: 20px;
+
+  left: 20px;
+
+  background: white;
+
+  padding: 15px;
+
+  border-radius: 10px;
+
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  z-index: 9999;
+
+  transform: translateY(150%); /* Hidden initially */
+
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+  max-width: 300px;
+
+  border-left: 4px solid #007bff;
+
+  font-family: sans-serif;
+
 }
+
+
 
 .fomo-popup.show {
-  transform: translateY(0);
+
+  transform: translateY(0);
+
 }
+
+
 
 .fomo-img {
-  font-size: 24px;
-  background: #f0f8ff;
-  padding: 10px;
-  border-radius: 50%;
+
+  font-size: 24px;
+
+  background: #f0f8ff;
+
+  padding: 10px;
+
+  border-radius: 50%;
+
 }
+
+
 
 .fomo-text {
-  display: flex;
-  flex-direction: column;
-  font-size: 13px;
-  color: #333;
+
+  display: flex;
+
+  flex-direction: column;
+
+  font-size: 13px;
+
+  color: #333;
+
 }
+
+
 
 .fomo-name { font-weight: bold; color: #007bff; }
+
 .fomo-time { font-size: 11px; color: #888; margin-top: 2px; }
+
 </style>
+
+
 
 <script>
+
 const fomoPopup = document.getElementById('fomo-notification');
+
 const locations = ['Delhi', 'Mumbai', 'Bangalore', 'Pune', 'Chennai', 'Hyderabad'];
+
 const products = ['Rider Pro Black', 'StormX Ultra', 'FireEdge Red', 'ThunderStrike Pro', 'Titan Glide'];
 
+
+
 function showNotification() {
-  // 1. Randomize Content
-  const randomLoc = locations[Math.floor(Math.random() * locations.length)];
-  const randomProd = products[Math.floor(Math.random() * products.length)];
-  const timeAgo = Math.floor(Math.random() * 59) + 1;
 
-  fomoPopup.querySelector('.fomo-name').innerText = `Someone in ${randomLoc}`;
-  fomoPopup.querySelector('.fomo-desc').innerHTML = `just ordered a <b>${randomProd}</b>`;
-  fomoPopup.querySelector('.fomo-time').innerText = `${timeAgo} minutes ago`;
+  // 1. Randomize Content
 
-  // 2. Show Popup
-  fomoPopup.classList.add('show');
+  const randomLoc = locations[Math.floor(Math.random() * locations.length)];
 
-  // 3. Hide after 4 seconds
-  setTimeout(() => {
-    fomoPopup.classList.remove('show');
-  }, 4000);
+  const randomProd = products[Math.floor(Math.random() * products.length)];
+
+  const timeAgo = Math.floor(Math.random() * 59) + 1;
+
+
+
+  fomoPopup.querySelector('.fomo-name').innerText = `Someone in ${randomLoc}`;
+
+  fomoPopup.querySelector('.fomo-desc').innerHTML = `just ordered a <b>${randomProd}</b>`;
+
+  fomoPopup.querySelector('.fomo-time').innerText = `${timeAgo} minutes ago`;
+
+
+
+  // 2. Show Popup
+
+  fomoPopup.classList.add('show');
+
+
+
+  // 3. Hide after 4 seconds
+
+  setTimeout(() => {
+
+    fomoPopup.classList.remove('show');
+
+  }, 4000);
+
 }
+
+
 
 // Start loop: Show every 10 to 20 seconds
+
 setInterval(showNotification, 12000); // 12 seconds
+
 // Show first one after 3 seconds
+
 setTimeout(showNotification, 3000);
+
 </script>
 
+
+
 <div class="whatsapp-float">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Chat on WhatsApp">
+
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Chat on WhatsApp">
+
 </a>
 
+
+
 <style>
+
 .whatsapp-float {
-  position: fixed;
-  bottom: 90px; /* Positioned above the "Back to Top" button */
-  right: 30px;
-  width: 60px;
-  height: 60px;
-  background-color: #25d366;
-  border-radius: 50%;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  z-index: 1000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.3s;
-  animation: pulse 2s infinite;
+
+  position: fixed;
+
+  bottom: 90px; /* Positioned above the "Back to Top" button */
+
+  right: 30px;
+
+  width: 60px;
+
+  height: 60px;
+
+  background-color: #25d366;
+
+  border-radius: 50%;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+
+  z-index: 1000;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  transition: transform 0.3s;
+
+  animation: pulse 2s infinite;
+
 }
+
+
 
 .whatsapp-float:hover {
-  transform: scale(1.1);
+
+  transform: scale(1.1);
+
 }
+
+
 
 .whatsapp-float img {
-  width: 35px;
-  height: 35px;
+
+  width: 35px;
+
+  height: 35px;
+
 }
 
+
+
 @keyframes pulse {
-  0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
-  70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+
+  0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+
+  70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+
+  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+
 }
+
 </style>
-  
+
+  
+
 </body>
+
 </html>
 
 
