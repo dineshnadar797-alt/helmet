@@ -8,56 +8,115 @@
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/responsive-fix.css">
 <style>
-/* Navbar with gradient background */
+/* --- Global Navbar --- */
 .header {
-  background: linear-gradient(90deg, #007bff, #00aaff); /* HexRide gradient blue */
+  background: linear-gradient(90deg, #007bff, #00aaff); 
   border-bottom: 2px solid #0056b3;
   position: sticky;
   top: 0;
   z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5%;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  transition: background 0.3s, box-shadow 0.3s;
-}
-
-.header:hover {
-  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
 .logo {
   color: #fff;
   font-weight: bold;
   font-size: 22px;
-  text-decoration: none; /* Removes the underline */
-  display: flex;         /* Keeps image and text aligned */
+  text-decoration: none;
+  display: flex;
   align-items: center;
-  gap: 10px;            /* Adds a little space between logo and text */
+  gap: 10px;
 }
 
-/* Optional: Subtle hover effect for the logo */
-.logo:hover {
-  opacity: 0.9;
+.nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
 }
 
 .nav a {
   color: #fff;
+  text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s, transform 0.2s;
+  position: relative;
+  padding: 5px 0;
+  transition: color 0.3s ease;
 }
 
-.nav a:hover,
-.nav a.active {
-  color: #ffd700; /* Gold on hover or active */
-  transform: scale(1.1);
+/* --- Center-Out Underline Animation --- */
+.nav a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ffd700;
+  transform: scaleX(0); /* Start at 0 width */
+  transform-origin: center; /* Expand from center */
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Mobile menu button */
+.nav a:hover::after,
+.nav a.active::after {
+  transform: scaleX(1); /* Expand to full width */
+}
+
+.nav a:hover {
+  color: #ffd700;
+}
+
+/* --- FAQ Content Styling --- */
+.page-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.faq-box {
+  background: #ffffff;
+  padding: 25px;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  border-left: 6px solid #007bff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.faq-box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  border-left-color: #ffd700; /* Turns gold on hover */
+}
+
+.faq-box h3 {
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 1.15rem;
+}
+
+.faq-box p {
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* --- Mobile Navigation --- */
 .menu-btn {
   color: #fff;
   font-size: 26px;
+  cursor: pointer;
+  display: none;
 }
 
-/* Mobile responsive menu */
 @media (max-width: 768px) {
+  .menu-btn { display: block; }
   .nav ul {
     position: absolute;
     top: 60px;
@@ -65,29 +124,14 @@
     background: linear-gradient(180deg, #007bff, #00aaff);
     flex-direction: column;
     width: 200px;
-    padding: 10px;
-    border: 1px solid #0056b3;
+    padding: 15px;
     display: none;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
   }
-
-  .nav ul.show {
-    display: block;
-  }
-
-  .nav a {
-    padding: 8px 0;
-  }
+  .nav ul.show { display: flex; }
+  .nav a::after { display: none; } /* Clean look for mobile */
 }
-
-.page-container {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 20px;        /* ← This creates left/right spacing */
-  line-height: 1.7;
-}
-
 
 </style>
 
@@ -99,6 +143,7 @@
   <a href="index.html" class="logo">
     <img src="img/hexride.png" width="40" alt="HexRide Logo"> HexRide
   </a>
+
   <nav class="nav">
     <ul>
       <li><a href="index.html">Home</a></li>
@@ -107,6 +152,7 @@
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
+
   <div class="menu-btn" onclick="toggleMenu()">☰</div>
 </header>
 
@@ -193,6 +239,7 @@ document.getElementById("year").textContent = new Date().getFullYear();
 
 </body>
 </html>
+
 
 
 
