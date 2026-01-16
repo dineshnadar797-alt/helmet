@@ -145,42 +145,36 @@
   cursor: pointer;
 }
 
-/* --- HOVER OVERLAY SYSTEM --- */
+/* --- NEW OVERLAY STYLES --- */
+
+/* Wrapper keeps the image and overlay together */
 .img-wrapper {
   position: relative;
   overflow: hidden;
-  border-radius: 12px 12px 0 0;
+  border-radius: 12px 12px 0 0; /* Matches card corners */
 }
 
+/* The name overlay - hidden by default */
 .img-overlay {
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  background: rgba(0, 123, 255, 0.4); /* HexRide Blue tint */
-  backdrop-filter: blur(2px); /* Slight blur effect */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: rgba(0, 0, 0, 0.75); /* Dark semi-transparent background */
   color: #ffd700; /* HexRide Gold */
-  font-weight: bold;
-  font-size: 1.2rem;
-  letter-spacing: 1px;
-  opacity: 0; /* Hidden by default */
-  transition: opacity 0.3s ease;
+  text-align: center;
+  padding: 10px 0;
+  font-weight: 600;
+  font-size: 15px;
+  transform: translateY(100%); /* Pushed down out of view */
+  transition: transform 0.3s ease-out;
   z-index: 10;
-  pointer-events: none;
+  pointer-events: none; /* Lets clicks pass through to the image link if needed */
 }
 
-/* Show overlay and keep image zoom working */
+/* Slide up on hover */
 .product-card:hover .img-overlay {
-  opacity: 1;
-}
-
-/* Ensure the image zoom still works behind the overlay */
-.product-card:hover img {
-  transform: scale(1.15) !important;
+  transform: translateY(0);
 }  
 
 /* 1. Lift and Glow Effect */
@@ -246,129 +240,129 @@
 
 <input type="text" id="searchBox" placeholder="Search helmets..." class="search-bar">
 
- <div class="product-grid-page">
+<div class="product-grid-page">
 
-  <div class="product-card">
-    <div class="img-wrapper">
-      <img src="img/pro-black.png" alt="Rider Pro Black" class="responsive-img">
-      <div class="img-overlay">VIEW DETAILS</div>
+    <div class="product-card">
+      <div class="img-wrapper">
+        <img src="img/pro-black.png" alt="Rider Pro Black" class="responsive-img">
+        <div class="img-overlay">Rider Pro Black</div>
+      </div>
+      <h3>Rider Pro Black</h3>
+      <p>Full-face matte black helmet with strong ABS shell.</p>
+      <p>Price: 5000/-</p>
+      <a href="order.html?product=Rider Pro Black" class="btn">Order Now</a>
     </div>
-    <h3>Rider Pro Black</h3>
-    <p>Full-face matte black helmet with strong ABS shell.</p>
-    <p>Price: 5000/-</p>
-    <a href="order.html?product=Rider Pro Black" class="btn">Order Now</a>
-  </div>
 
-  <div class="product-card">
-    <div class="img-wrapper">
-      <img src="img/firered.png" alt="FireEdge Red" class="responsive-img">
-      <div class="img-overlay">VIEW DETAILS</div>
+    <div class="product-card">
+      <div class="img-wrapper">
+        <img src="img/firered.png" alt="FireEdge Red" class="responsive-img">
+        <div class="img-overlay">FireEdge Red</div>
+      </div>
+      <h3>FireEdge Red</h3>
+      <p>Sporty red helmet with dual visor and airflow vents.</p>
+      <p>Price: 7500/-</p>
+      <a href="order.html?product=FireEdge Red" class="btn">Order Now</a>
     </div>
-    <h3>FireEdge Red</h3>
-    <p>Sporty red helmet with dual visor and airflow vents.</p>
-    <p>Price: 7500/-</p>
-    <a href="order.html?product=FireEdge Red" class="btn">Order Now</a>
-  </div>
 
-  <div class="product-card">
-    <div class="img-wrapper">
-      <img src="img/aero.png" alt="AeroShield White" class="responsive-img">
-      <div class="img-overlay">VIEW DETAILS</div>
+    <div class="product-card">
+      <div class="img-wrapper">
+        <img src="img/aero.png" alt="AeroShield White" class="responsive-img">
+        <div class="img-overlay">AeroShield White</div>
+      </div>
+      <h3>AeroShield White</h3>
+      <p>Aerodynamic lightweight helmet for comfort riding.</p>
+      <p>Price: 6700/-</p>
+      <a href="order.html?product=AeroShield White" class="btn">Order Now</a>
     </div>
-    <h3>AeroShield White</h3>
-    <p>Aerodynamic lightweight helmet for comfort riding.</p>
-    <p>Price: 6700/-</p>
-    <a href="order.html?product=AeroShield White" class="btn">Order Now</a>
-  </div>
 
-  <div class="product-card">
-    <span class="sale-badge">Sale</span>
-    <div class="img-wrapper">
-      <img src="img/stormx.png" alt="StormX Helmet" class="responsive-img">
-      <div class="img-overlay">VIEW DETAILS</div>
+    <div class="product-card">
+      <span class="sale-badge">Sale</span>
+      <div class="img-wrapper">
+        <img src="img/stormx.png" alt="StormX Helmet" class="responsive-img">
+        <div class="img-overlay">StormX Ultra</div>
+      </div>
+      <h3>StormX Ultra</h3>
+      <p>ISI-approved helmet with heavy-duty ABS shell.</p>
+      <p>Price: <del style="color:red; font-size: 0.9em;">6500/-</del> <b>5000/-</b></p>
+      <a href="order.html?product=StormX Ultra" class="btn">Order Now</a>
     </div>
-    <h3>StormX Ultra</h3>
-    <p>ISI-approved helmet with heavy-duty ABS shell.</p>
-    <p>Price: <del style="color:red; font-size: 0.9em;">6500/-</del> <b>5000/-</b></p>
-    <a href="order.html?product=StormX Ultra" class="btn">Order Now</a>
-  </div>
 
-  <div class="product-card">
-    <div class="img-wrapper">
-      <img src="img/thunder.png" alt="ThunderStrike Pro" class="responsive-img">
-      <div class="img-overlay">VIEW DETAILS</div>
+    <div class="product-card">
+      <div class="img-wrapper">
+        <img src="img/thunder.png" alt="ThunderStrike Pro" class="responsive-img">
+        <div class="img-overlay">ThunderStrike Pro</div>
+      </div>
+      <h3>ThunderStrike Pro</h3>
+      <p>Stay Safe. Stay Fast. Go ThunderStrike.</p>
+      <p>Price: 4000/-</p>
+      <a href="order.html?product=ThunderStrike Pro" class="btn">Order Now</a>
     </div>
-    <h3>ThunderStrike Pro</h3>
-    <p>Stay Safe. Stay Fast. Go ThunderStrike.</p>
-    <p>Price: 4000/-</p>
-    <a href="order.html?product=ThunderStrike Pro" class="btn">Order Now</a>
-  </div>
 
-  <div class="product-card">
-    <div class="img-wrapper">
-      <img src="img/titan.png" alt="Titan Glide" class="responsive-img">
-      <div class="img-overlay">VIEW DETAILS</div>
+    <div class="product-card">
+      <div class="img-wrapper">
+        <img src="img/titan.png" alt="Titan Glide" class="responsive-img">
+        <div class="img-overlay">Titan Glide</div>
+      </div>
+      <h3>Titan Glide</h3>
+      <p>Smooth Protection. Strong Performance. Titan Glide.</p>
+      <p>Price: 5500/-</p>
+      <a href="order.html?product=Titan Glide" class="btn">Order Now</a>
     </div>
-    <h3>Titan Glide</h3>
-    <p>Smooth Protection. Strong Performance. Titan Glide.</p>
-    <p>Price: 5500/-</p>
-    <a href="order.html?product=Titan Glide" class="btn">Order Now</a>
-  </div>
 
-  <div class="product-card">
-    <div class="img-wrapper">
-      <img src="img/phantom.png" alt="Phantom Aero-X" class="responsive-img">
-      <div class="img-overlay">VIEW DETAILS</div>
+    <div class="product-card">
+      <div class="img-wrapper">
+        <img src="img/phantom.png" alt="Phantom Aero-X" class="responsive-img">
+        <div class="img-overlay">Phantom Aero-X</div>
+      </div>
+      <h3>Phantom Aero-X</h3>
+      <p>“Ultra-aerodynamic helmet built for speed, style, and safety.”</p>
+      <p>Price: 7500/-</p>
+      <a href="order.html?product=Phantom Aero-X" class="btn">Order Now</a>
     </div>
-    <h3>Phantom Aero-X</h3>
-    <p>“Ultra-aerodynamic helmet built for speed, style, and safety.”</p>
-    <p>Price: 7500/-</p>
-    <a href="order.html?product=Phantom Aero-X" class="btn">Order Now</a>
-  </div>
 
-  <div class="product-card">
-    <div class="img-wrapper">
-      <img src="img/wolfen.png" alt="WolfenX Beast Mode" class="responsive-img">
-      <div class="img-overlay">VIEW DETAILS</div>
+    <div class="product-card">
+      <div class="img-wrapper">
+        <img src="img/wolfen.png" alt="WolfenX Beast Mode" class="responsive-img">
+        <div class="img-overlay">WolfenX Beast Mode</div>
+      </div>
+      <h3>WolfenX Beast Mode</h3>
+      <p>“Unleash the beast—wild graphics, wild performance.”</p>
+      <p>Price: 6700/-</p>
+      <a href="order.html?product=WolfenX Beast Mode" class="btn">Order Now</a>
     </div>
-    <h3>WolfenX Beast Mode</h3>
-    <p>“Unleash the beast—wild graphics, wild performance.”</p>
-    <p>Price: 6700/-</p>
-    <a href="order.html?product=WolfenX Beast Mode" class="btn">Order Now</a>
-  </div>
 
-  <div class="product-card">
-    <div class="img-wrapper">
-      <img src="img/racerx.png" alt="RacerX Velocity 92" class="responsive-img">
-      <div class="img-overlay">VIEW DETAILS</div>
+    <div class="product-card">
+      <div class="img-wrapper">
+        <img src="img/racerx.png" alt="RacerX Velocity 92" class="responsive-img">
+        <div class="img-overlay">RacerX Velocity 92</div>
+      </div>
+      <h3>RacerX Velocity 92</h3>
+      <p>“Unmatched speed, unbeatable style.”</p>
+      <p>Price: 4000/-</p>
+      <a href="order.html?product=RacerX Velocity 92" class="btn">Order Now</a>
     </div>
-    <h3>RacerX Velocity 92</h3>
-    <p>“Unmatched speed, unbeatable style.”</p>
-    <p>Price: 4000/-</p>
-    <a href="order.html?product=RacerX Velocity 92" class="btn">Order Now</a>
-  </div>
 
-  <div class="product-card">
-    <div class="img-wrapper">
-      <img src="img/trailhawk.png" alt="TrailHawk Adventure Pro" class="responsive-img">
-      <div class="img-overlay">VIEW DETAILS</div>
+    <div class="product-card">
+      <div class="img-wrapper">
+        <img src="img/trailhawk.png" alt="TrailHawk Adventure Pro" class="responsive-img">
+        <div class="img-overlay">TrailHawk Adventure Pro</div>
+      </div>
+      <h3>TrailHawk Adventure Pro</h3>
+      <p>“Conquer dirt, sand, and mountains with confidence.”</p>
+      <p>Price: 8400/-</p>
+      <a href="order.html?product=TrailHawk Adventure Pro" class="btn">Order Now</a>
     </div>
-    <h3>TrailHawk Adventure Pro</h3>
-    <p>“Conquer dirt, sand, and mountains with confidence.”</p>
-    <p>Price: 8400/-</p>
-    <a href="order.html?product=TrailHawk Adventure Pro" class="btn">Order Now</a>
-  </div>
 
-  <div class="product-card">
-    <div class="img-wrapper">
-      <img src="img/nightguard.png" alt="NightGuard Tactical VX" class="responsive-img">
-      <div class="img-overlay">VIEW DETAILS</div>
+    <div class="product-card">
+      <div class="img-wrapper">
+        <img src="img/nightguard.png" alt="NightGuard Tactical VX" class="responsive-img">
+        <div class="img-overlay">NightGuard Tactical VX</div>
+      </div>
+      <h3>NightGuard Tactical VX</h3>
+      <p>“Futuristic armor meets advanced road safety.”</p>
+      <p>Price: 8900/-</p>
+      <a href="order.html?product=NightGuard Tactical VX" class="btn">Order Now</a>
     </div>
-    <h3>NightGuard Tactical VX</h3>
-    <p>“Futuristic armor meets advanced road safety.”</p>
-    <p>Price: 8900/-</p>
-    <a href="order.html?product=NightGuard Tactical VX" class="btn">Order Now</a>
-  </div>
 
 </div>
 </section>
@@ -615,6 +609,7 @@ setTimeout(showNotification, 3000);
   
 </body>
 </html>
+
 
 
 
