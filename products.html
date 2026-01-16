@@ -145,6 +145,34 @@
   cursor: pointer;
 }
 
+/* Wrapper to hold the image and the text together */
+.img-wrapper {
+  position: relative;
+  overflow: hidden; /* Ensures text stays inside the rounded corners */
+}
+
+/* The text that appears on hover */
+.img-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Dark background */
+  color: #ffd700; /* Matching your HexRide Gold */
+  text-align: center;
+  padding: 8px 0;
+  font-weight: bold;
+  font-size: 14px;
+  transform: translateY(100%); /* Hides it by pushing it down */
+  transition: transform 0.3s ease-in-out;
+  z-index: 20; /* Ensures it sits on top of the image */
+}
+
+/* When hovering the wrapper, slide the text up */
+.img-wrapper:hover .img-overlay {
+  transform: translateY(0);
+}  
+
 /* 1. Lift and Glow Effect */
 .product-card:hover {
   transform: translateY(-10px) !important;
@@ -212,13 +240,17 @@
 
     <!-- PRODUCT ITEM -->
     <div class="product-card">
+  
+  <div class="img-wrapper">
       <img src="img/pro-black.png" alt="Rider Pro Black" class="responsive-img">
-      <h3>Rider Pro Black</h3>
-      <p>Full-face matte black helmet with strong ABS shell.</p>
-      <p>Price: 5000/-</p>
-      <a href="order.html?product=Rider Pro Black" class="btn">Order Now</a>
+      <div class="img-overlay">Rider Pro Black</div>
+  </div>
 
-    </div>
+  <h3>Rider Pro Black</h3>
+  <p>Full-face matte black helmet with strong ABS shell.</p>
+  <p>Price: 5000/-</p>
+  <a href="order.html?product=Rider Pro Black" class="btn">Order Now</a>
+</div>
 
     <div class="product-card">
       <img src="img/firered.png" alt="FireEdge Red" class="responsive-img">
@@ -556,6 +588,7 @@ setTimeout(showNotification, 3000);
   
 </body>
 </html>
+
 
 
 
